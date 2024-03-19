@@ -1,0 +1,13 @@
+version: "24.0.7"
+
+services:
+  mongodb:
+    image: mongo:latest # "image" doğru şekilde girintili olmalı
+    restart: always # "restart" doğru şekilde girintili olmalı
+    ports:
+      - "27017:27017" # Port tanımı çift tırnak içine alınmalı
+    volumes:
+      - data:/data/db
+
+volumes:
+  data: # "volumes" anahtarının girintisi dışarıda olmalı
