@@ -2,10 +2,11 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 const helmet = require("helmet");
 const config = require("./config");
-const { ProjectRoutes, UserRoutes, SectionRoutes, TaskRoutes } = require("./api-routes");
 const loaders = require("./loaders");
 const events = require("./scripts/events");
 const path = require("path");
+const errorHandler = require("./middlewares/errorHandler");
+const { ProjectRoutes, UserRoutes, SectionRoutes, TaskRoutes } = require("./api-routes");
 
 config();
 loaders();
@@ -24,4 +25,13 @@ app.listen(process.env.APP_PORT, () => {
 
   app.use("/sections", SectionRoutes.router);
   app.use("/tasks", TaskRoutes.router);
+
+  app.use((req, res, next) => {
+    const error = new Error("Aradığınız sayfa bulunmamaktadır!");
+    error.status = 404;
+    console.log("çalıştı");
+    next(error);
+  });
+  //error handler
+  app.use(errorHandler);
 });

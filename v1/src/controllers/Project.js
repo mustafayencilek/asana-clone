@@ -28,6 +28,7 @@ class Project {
 
     ProjectService.update(req.params?.id, req.body)
       .then((updatedProject) => {
+        console.log("updatedProject", updatedProject);
         return res.status(httpStatus.OK).send(updatedProject);
       })
       .catch((e) =>
