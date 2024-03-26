@@ -6,6 +6,7 @@ This project is a web application that mimics the core functionalities of Asana.
 
 This project is developed using JavaScript and includes the following technologies:
 
+- Node.js: Used as the runtime environment for server-side JavaScript.
 - MongoDB: Used as the database.
 - Express.js: Used as the server-side application framework.
 - Packages:
