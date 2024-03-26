@@ -21,14 +21,14 @@ This project is developed using JavaScript and includes the following technologi
   - uuid: Used for generating unique identifiers.
   - winston: Used for logging.
 
-# USERS
+## USERS
 ![USERS](/images/users.png)
 
-# PROJECTS
+## PROJECTS
 ![PROJECTS](/images/projects.png)
 
-# SECTIONS
+## SECTIONS
 ![SECTIONS](/images/sections.png)
 
-# TASKS
+## TASKS
 ![TASKS](/images/tasks.png)    
